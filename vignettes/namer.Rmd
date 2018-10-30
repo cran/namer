@@ -1,0 +1,46 @@
+---
+title: "Intro to the namer package"
+author: "M. Salmon"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{namer}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The goal of namer is to name the chunks of R Markdown files. It's your safety net when you've (willingly) forgotten to name most chunks of all R Markdown files in a folder. `namer` does *not* give meaningful labels to your chunks, but it gives them labels that won't change depending on their position like the automatic `knitr:::unnamed_chunk` function does when knitting. So you can e.g. shuffle your chunks and not loose their cache, or more easily debug over a whole folder!
+
+For context about _why_ you should name your R Markdown chunks, read [this blog post](https://masalmon.eu/2017/08/08/chunkpets/).
+
+Check out [this real life example](https://github.com/lockedata/pres-datascience/pull/1), result of running `namer::name_dir_chunks("pres")`.
+
+
+## Use
+
+This is a basic example which shows you how to solve a common problem. The "test" folder first contains R Markdown files with unnamed chunks. After running `name_dir_chunks`, they're all named, with names using the filenames as basis.
+
+```r
+temp_dir <- tempdir()
+fs::dir_copy(system.file("examples", package = "namer"),
+            temp_dir)
+ # this is an example file that'd fail
+fs::file_delete(file.path(temp_dir, "example4.Rmd"))
+name_dir_chunks(temp_dir)
+if(interactive()){
+  file.edit(file.path(temp_dir, "example1.Rmd"))
+}
+
+fs::dir_delete(temp_dir)
+```
+
+There's also `name_chunks` for use on a single R Markdown file; and `unname_all_chunks` to unname all chunks of a single R Markdown file which can be useful when cleaning your chunk labels.
+
+**When using `namer`, please check the edits before pushing them to your code base. Such automatic chunk labelling is best paired with [version control](http://happygitwithr.com/).**
