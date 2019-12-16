@@ -1,6 +1,6 @@
 Package: namer
 Title: Names Your 'R Markdown' Chunks
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: 
     c(person(given = "Steph",
              family = "Locke",
@@ -10,34 +10,40 @@ Authors@R:
              family = "Salmon",
              role = "aut",
              email = "maelle.salmon@yahoo.se",
-             comment = c(ORCID = "0000-0002-2815-0399")),
+             comment = structure("0000-0002-2815-0399", .Names = "ORCID")),
       person(given = "Ellis",
              family = "Valentiner",
              role = "ctb"),
       person(given = "Martin",
              family = "Hadley",
              role = "ctb",
-             comment = c(ORCID = "0000-0002-3039-6849")),
+             comment = structure("0000-0002-3039-6849", .Names = "ORCID")),
       person(given = "Locke Data",
              role = "fnd",
-             comment = "https://itsalocke.com"))
+             comment = "https://itsalocke.com"),
+      person(given = "Han",
+             family = "Oostdijk",
+             role = "ctb",
+             comment = structure("0000-0001-6710-4566", .Names = "ORCID"))
+      )
 Description: It names the 'R Markdown' chunks of files based on the filename.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: fs, glue, magrittr, purrr, tibble, dplyr, rstudioapi
-RoxygenNote: 6.1.1
-Suggests: testthat, covr, rmarkdown, knitr, UNF
+RoxygenNote: 7.0.2
+Suggests: testthat, rmarkdown, knitr, UNF
 VignetteBuilder: knitr
 URL: https://github.com/lockedata/namer
 BugReports: https://github.com/lockedata/namer/issues
 NeedsCompilation: no
-Packaged: 2019-03-26 13:06:24 UTC; maelle
+Packaged: 2019-12-16 11:29:44 UTC; maelle
 Author: Steph Locke [aut, cre],
   Maëlle Salmon [aut] (<https://orcid.org/0000-0002-2815-0399>),
   Ellis Valentiner [ctb],
   Martin Hadley [ctb] (<https://orcid.org/0000-0002-3039-6849>),
-  Locke Data [fnd] (https://itsalocke.com)
+  Locke Data [fnd] (https://itsalocke.com),
+  Han Oostdijk [ctb] (<https://orcid.org/0000-0001-6710-4566>)
 Maintainer: Steph Locke <steph@itsalocke.com>
 Repository: CRAN
-Date/Publication: 2019-03-26 14:10:02 UTC
+Date/Publication: 2019-12-16 12:30:02 UTC

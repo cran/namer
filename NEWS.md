@@ -1,3 +1,9 @@
+# namer 0.1.5
+
+* The tests using rmarkdown are now skipped if Pandoc 1.12.3 (minimal version for rmarkdown) is not available.
+
+* unname_all_chunks now accepts argument `chunk_name_prefix` with the prefix of the chunknames to be unnamed (@HanOostdijk, #22)
+
 # namer 0.1.4
 
 * The regex recognizing the beginning of a chunk now demands ``` are at the beginning of a line (@gorkang, #17).
