@@ -4,10 +4,18 @@
 \alias{name_chunks}
 \title{Name chunks in a single file}
 \usage{
-name_chunks(path)
+name_chunks(path, unname = FALSE)
 }
 \arguments{
 \item{path}{Path to file}
+
+\item{unname}{Should all chunks be unnamed before naming? Default is `FALSE`.
+Turning this option on will cause all existing labels to be overwritten. In
+contrast, with its default `unname = FALSE` only unlabelled chunks will be
+named.}
+}
+\value{
+Always returns TRUE invisibly. Called for side effects.
 }
 \description{
 Name unnamed chunks in a single file using the filename with extension stripped as basis.

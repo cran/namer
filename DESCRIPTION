@@ -1,49 +1,61 @@
 Package: namer
 Title: Names Your 'R Markdown' Chunks
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: 
-    c(person(given = "Steph",
-             family = "Locke",
+    c(person(given = "Rhian",
+             family = "Davies",
              role = c("aut", "cre"),
+             email = "rhian@jumpingrivers.com"),
+    person(given = "Steph",
+             family = "Locke",
+             role = c("aut"),
              email = "steph@itsalocke.com"),
       person(given = "Maëlle",
              family = "Salmon",
              role = "aut",
              email = "maelle.salmon@yahoo.se",
-             comment = structure("0000-0002-2815-0399", .Names = "ORCID")),
+             comment = c(ORCID = "0000-0002-2815-0399")),
       person(given = "Ellis",
              family = "Valentiner",
              role = "ctb"),
-      person(given = "Martin",
+      person(given = "Charlie",
              family = "Hadley",
              role = "ctb",
-             comment = structure("0000-0002-3039-6849", .Names = "ORCID")),
-      person(given = "Locke Data",
+             comment = c(ORCID = "0000-0002-3039-6849")),
+      person(given = "Jumping Rivers",
              role = "fnd",
-             comment = "https://itsalocke.com"),
+             comment = "https://jumpingrivers.com"),
       person(given = "Han",
              family = "Oostdijk",
              role = "ctb",
-             comment = structure("0000-0001-6710-4566", .Names = "ORCID"))
-      )
-Description: It names the 'R Markdown' chunks of files based on the filename.
-License: GPL-3
-Encoding: UTF-8
-LazyData: true
-Imports: fs, glue, magrittr, purrr, tibble, dplyr, rstudioapi
-RoxygenNote: 7.0.2
-Suggests: testthat, rmarkdown, knitr, UNF
+             comment = c(ORCID = "0000-0001-6710-4566")),
+      person(given = "Patrick",
+             family = "Schratz",
+             role = "ctb",
+             email = "patrick.schratz@gmail.com",
+             comment = c(ORCID = "0000-0003-0748-6624")))
+Description: It names the 'R Markdown' chunks of files based on
+    the filename.
+License: GPL (>= 3)
+URL: https://github.com/jumpingrivers/namer,
+        https://jumpingrivers.github.io/namer/
+BugReports: https://github.com/jumpingrivers/namer/issues
+Imports: cli, dplyr, fs, glue, magrittr, purrr, rstudioapi, tibble
+Suggests: knitr, rmarkdown, testthat
 VignetteBuilder: knitr
-URL: https://github.com/lockedata/namer
-BugReports: https://github.com/lockedata/namer/issues
+Encoding: UTF-8
+Language: en-GB
+RoxygenNote: 7.2.1
 NeedsCompilation: no
-Packaged: 2019-12-16 11:29:44 UTC; maelle
-Author: Steph Locke [aut, cre],
+Packaged: 2022-10-04 14:18:37 UTC; rhian
+Author: Rhian Davies [aut, cre],
+  Steph Locke [aut],
   Maëlle Salmon [aut] (<https://orcid.org/0000-0002-2815-0399>),
   Ellis Valentiner [ctb],
-  Martin Hadley [ctb] (<https://orcid.org/0000-0002-3039-6849>),
-  Locke Data [fnd] (https://itsalocke.com),
-  Han Oostdijk [ctb] (<https://orcid.org/0000-0001-6710-4566>)
-Maintainer: Steph Locke <steph@itsalocke.com>
+  Charlie Hadley [ctb] (<https://orcid.org/0000-0002-3039-6849>),
+  Jumping Rivers [fnd] (https://jumpingrivers.com),
+  Han Oostdijk [ctb] (<https://orcid.org/0000-0001-6710-4566>),
+  Patrick Schratz [ctb] (<https://orcid.org/0000-0003-0748-6624>)
+Maintainer: Rhian Davies <rhian@jumpingrivers.com>
 Repository: CRAN
-Date/Publication: 2019-12-16 12:30:02 UTC
+Date/Publication: 2022-10-06 16:30:16 UTC
